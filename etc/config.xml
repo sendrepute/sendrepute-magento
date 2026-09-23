@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sendrepute>
+            <mail>
+                <enabled>0</enabled>
+                <paid_consent>0</paid_consent>
+                <opt_in_routes></opt_in_routes>
+                <critical_opt_in_routes></critical_opt_in_routes>
+                <risk_policy>advisory</risk_policy>
+                <failure_policy>preserve</failure_policy>
+                <threshold>0.80</threshold>
+            </mail>
+        </sendrepute>
+    </default>
+</config>

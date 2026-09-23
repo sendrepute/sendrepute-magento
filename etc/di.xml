@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Mail\TransportInterface">
+        <plugin name="sendrepute_final_transport"
+                type="SendRepute\MailAdapter\Plugin\TransportPlugin"
+                sortOrder="900"/>
+    </type>
+    <type name="Magento\Framework\Mail\Template\TransportBuilder">
+        <plugin name="sendrepute_template_route"
+                type="SendRepute\MailAdapter\Plugin\TransportBuilderPlugin"
+                sortOrder="900"/>
+    </type>
+</config>

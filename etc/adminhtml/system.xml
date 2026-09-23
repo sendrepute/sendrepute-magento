@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sendrepute" translate="label" sortOrder="905" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SendRepute</label>
+            <tab>services</tab>
+            <resource>SendRepute_MailAdapter::config</resource>
+            <group id="mail" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Paid pre-send classification</label>
+                <comment><![CDATA[The token is read only from the SENDREPUTE_API_TOKEN server environment variable. The fixed destination is https://www.sendrepute.com/api/v1/classify.]]></comment>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable adapter</label>
+                    <comment>Off by default. Enabling alone does not authorize a paid call.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="paid_consent" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Authorize content disclosure and paid calls</label>
+                    <comment>Explicit consent to send opted-in final displayed content and incur classification charges.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="opt_in_routes" translate="label comment" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Opted-in template identifiers</label>
+                    <comment>Comma or newline separated exact Magento template identifiers. Empty means no messages are classified.</comment>
+                </field>
+                <field id="critical_opt_in_routes" translate="label comment" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Independent safety approval for opted-in routes</label>
+                    <comment>Required for every route because numeric/custom template identifiers have no trustworthy security semantics. Each route must be listed here and above.</comment>
+                </field>
+                <field id="risk_policy" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Classification result policy</label>
+                    <source_model>SendRepute\MailAdapter\Model\Config\Source\RiskPolicy</source_model>
+                </field>
+                <field id="failure_policy" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API or validation failure policy</label>
+                    <comment>Independent of classification result policy. Preserve sends the unchanged message; block throws a mail exception.</comment>
+                    <source_model>SendRepute\MailAdapter\Model\Config\Source\FailurePolicy</source_model>
+                </field>
+                <field id="threshold" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Spam probability threshold</label>
+                    <comment>A finite number from 0 through 1, used only when result policy is Block.</comment>
+                    <validate>required-entry validate-number validate-number-range number-range-0-1</validate>
+                    <backend_model>SendRepute\MailAdapter\Model\Config\Backend\Threshold</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

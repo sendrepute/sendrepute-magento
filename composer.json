@@ -1,0 +1,22 @@
+{
+  "name": "sendrepute/magento-mail-adapter",
+  "description": "Opt-in paid SendRepute pre-send classification for Magento Open Source",
+  "type": "magento2-module",
+  "version": "0.1.1",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1 || ^8.2 || ^8.3",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "magento/framework": "103.0.7-p5 || 103.0.7-p6"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "SendRepute\\MailAdapter\\": ""
+    }
+  }
+}

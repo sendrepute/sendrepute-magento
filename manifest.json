@@ -1,0 +1,18 @@
+{
+  "name": "sendrepute/magento-mail-adapter",
+  "module": "SendRepute_MailAdapter",
+  "version": "0.1.1",
+  "platform": "Magento Open Source",
+  "verifiedPatchlines": [
+    "2.4.7-p5",
+    "2.4.7-p6"
+  ],
+  "apiEndpoint": "https://www.sendrepute.com/api/v1/classify",
+  "packageRoot": "SendRepute_MailAdapter",
+  "productionArchiveExcludes": [
+    "tests",
+    "scripts",
+    "dist",
+    ".gitignore"
+  ]
+}
