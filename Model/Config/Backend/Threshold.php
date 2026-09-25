@@ -6,7 +6,7 @@ namespace SendRepute\MailAdapter\Model\Config\Backend;
 use Magento\Framework\App\Config\Value;
 use Magento\Framework\Exception\ValidatorException;
 
-final class Threshold extends Value
+class Threshold extends Value
 {
     public function beforeSave()
     {
