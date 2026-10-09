@@ -1,0 +1,23 @@
+{
+  "integration": "magento",
+  "files": [
+    "artifacts/spam-signal/public/integration-previews/magento.webp",
+    "integrations/magento/docs/screenshots/dashboard.webp"
+  ],
+  "sha256": "f631a91a7e01c443579ff110e7507f27332f2792472e638870f0345b730245a1",
+  "capture": {
+    "method": "Real Chromium screenshot via playwright 1.62.1 (/repl/tools/bin/chromium), viewport 1440x1000 CSS px, first viewport only",
+    "viewport": "1440x1000 (CSS px)",
+    "date": "2026-10-09",
+    "state": "Signed-in native admin, SendRepute console Account tab, after clicking the shipped 'Load account' button (one free GET /v1/account read)"
+  },
+  "installed_vs_fixture": "actual-installed",
+  "host": "Magento Open Source 2.4.7-p6 (public GitHub source commit b69acb3d4cb3720665c7829fd6390d3036a07b13 + committed composer.lock, --no-dev), PHP 8.3.23 + ext-xsl via nix-shell, Elasticsearch 7.17.27 on loopback, default mode, php -S pub phpserver/router.php",
+  "integration_source": "integrations/magento copied unchanged to app/code/SendRepute/MailAdapter, enabled by setup:install",
+  "url_path": "/index.php/admin/sendrepute/console/index/",
+  "transport": "Shipped CurlTransport (ConsoleGateway::API_BASE https://www.sendrepute.com/api) via https_proxy env and curl.cainfo; SENDREPUTE_API_TOKEN set in the environment",
+  "bound": "127.0.0.1 only, temporary /tmp host, stopped after capture",
+  "demo_data_boundary": "Synthetic sample account only (id acct_sample_7f3c21, username sample-operator@example.invalid, credit USD 43.18250, 37 free classifications, 1284 successful classifications). HTTPS to www.sendrepute.com went through a loopback-only CONNECT proxy (127.0.0.1:39400) that ends TLS with a throwaway CA trusted only by this disposable PHP process and never connects upstream. No live API, paid calls, or mail. The disposable token 'sample-loopback-token' is held server-side and never shown in the UI. Isolated MariaDB 10.11.13 data dir in /tmp. No project or production database used. Host deleted after capture.",
+  "notes": "admin/security/use_form_key was set to 0 on the disposable host so the console URL could be opened directly. The 'indexers are invalid' banner is native, because the host had no cron.",
+  "caption": "SendRepute service console Account panel inside Magento, running in a disposable local install with a synthetic sample account. Not a live account."
+}

@@ -1,5 +1,11 @@
 # SendRepute paid pre-send adapter for Magento Open Source
 
+## Control panel preview
+
+![SendRepute inside Magento administration](https://raw.githubusercontent.com/sendrepute/sendrepute-magento/main/docs/screenshots/dashboard.webp)
+
+Captured from a local installation with sample data.
+
 Version **0.1.1** is a Composer `magento2-module` for the exact Magento Open
 Source patch releases **2.4.7-p5** and **2.4.7-p6**. It is not an Adobe
 Marketplace listing and makes no compatibility claim for another release.
