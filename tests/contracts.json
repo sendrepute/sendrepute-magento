@@ -1,0 +1,22 @@
+{
+  "patchlines": {
+    "2.4.7-p5": {
+      "commit": "dc87600a0ab002bb2b7ef573fe78cfc951edb36c",
+      "files": {
+        "TransportInterface.php": "b39036471c01cbc3469368faa8fcdbf906b8186bd5f446fe732eeb297eb283ac",
+        "EmailMessageInterface.php": "c99f16bd208e763798184d3b2cf48a79c4f976eed206fb6099867b8fe48ae1c1",
+        "MimeMessageInterface.php": "0e8be973cb2695d2cae2f830d165a11f8078c875e4e50485b4425d4887869ed6",
+        "MimePartInterface.php": "d668ac96d2ec2d8a3ad19452477278299b635730d70446314770da3e8c9bb649"
+      }
+    },
+    "2.4.7-p6": {
+      "commit": "b69acb3d4cb3720665c7829fd6390d3036a07b13",
+      "files": {
+        "TransportInterface.php": "b39036471c01cbc3469368faa8fcdbf906b8186bd5f446fe732eeb297eb283ac",
+        "EmailMessageInterface.php": "c99f16bd208e763798184d3b2cf48a79c4f976eed206fb6099867b8fe48ae1c1",
+        "MimeMessageInterface.php": "0e8be973cb2695d2cae2f830d165a11f8078c875e4e50485b4425d4887869ed6",
+        "MimePartInterface.php": "d668ac96d2ec2d8a3ad19452477278299b635730d70446314770da3e8c9bb649"
+      }
+    }
+  }
+}

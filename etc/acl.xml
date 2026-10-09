@@ -4,6 +4,11 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::system">
+                    <resource id="SendRepute_MailAdapter::console"
+                              title="SendRepute Service Console (account, billing and paid customer API operations)"
+                              sortOrder="90"/>
+                </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">

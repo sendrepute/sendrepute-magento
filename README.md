@@ -1,5 +1,3 @@
-> **Standalone source distribution:** this repository contains the integration runtime, documentation, and source packager. Upstream workspace/CMS/production-normalizer regression suites are deliberately not distributed here because they depend on private server code or isolated platform fixtures. Testing commands and historical verification evidence below describe upstream maintainer validation, not a self-contained test suite in this source-only checkout. No third-party registry publication is implied.
-
 # SendRepute paid pre-send adapter for Magento Open Source
 
 Version **0.1.1** is a Composer `magento2-module` for the exact Magento Open

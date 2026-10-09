@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="SendRepute_MailAdapter::console"
+             title="SendRepute Service Console"
+             translate="title"
+             module="SendRepute_MailAdapter"
+             sortOrder="90"
+             parent="Magento_Backend::system_other_settings"
+             action="sendrepute/console/index"
+             resource="SendRepute_MailAdapter::console"/>
+    </menu>
+</config>

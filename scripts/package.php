@@ -6,7 +6,7 @@ $output = $root . '/dist/sendrepute-magento-0.1.1.zip';
 $allowedTop = [
     'composer.json', 'LICENSE', 'manifest.json', 'README.md', 'registration.php', 'SECURITY.md',
 ];
-$allowedDirs = ['Exception', 'Model', 'Plugin', 'etc'];
+$allowedDirs = ['Controller', 'Exception', 'Model', 'Plugin', 'ServiceConsole', 'etc'];
 $files = $allowedTop;
 foreach ($allowedDirs as $dir) {
     $iterator = new RecursiveIteratorIterator(

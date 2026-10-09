@@ -1,0 +1,35 @@
+{
+    "status": "passed",
+    "reason": "Installed Magento: native ACL/CSRF/XSS, high-risk cancellation, final transport, local sink, consent-off and four-way same-content concurrency passed; no adapter nonce/retry feature.",
+    "magento_tag": "2.4.7-p6",
+    "source_commit": "b69acb3d4cb3720665c7829fd6390d3036a07b13",
+    "source_zip_sha256": "2d804fee8845ab1c1f80b5e4c525eb925a4ac8cc4ce8976113e46c9330d4236c",
+    "composer_lock_sha256": "7c2b8846ccbd5bb91acc71f14dc1d46b5114b5a9a91b7f33e4e53e7e98cba200",
+    "php": "8.3.23",
+    "composer": "Composer version 2.8.5 2025-01-21 15:23:40",
+    "mariadb": "10.11.13, owned socket, networking disabled",
+    "search": "Elasticsearch 7.17.27, disposable loopback 34705/34706",
+    "ports": [
+        34700,
+        34705,
+        34706
+    ],
+    "work_root": "/tmp/sendrepute-magento-installed.8aJbr5",
+    "full_install": true,
+    "coverage": {
+        "native_admin_guest_redirect": "passed",
+        "native_admin_authenticated_config": "passed",
+        "native_admin_missing_form_key": "rejected",
+        "native_admin_restricted_role_acl": "denied",
+        "native_admin_stored_xss": "escaped",
+        "final_transport_synthetic_high_risk": "blocked before delivery",
+        "final_transport_synthetic_failure": "blocked before delivery",
+        "final_transport_allowed_and_unselected": "delivered to owned sink",
+        "consent_off": "delivered without classification",
+        "four_simultaneous_same_content_opted_in": "four independent classifications and four sink deliveries; no adapter nonce/retry implementation",
+        "nonce_and_retry": "not applicable: adapter contains neither"
+    },
+    "sink_deliveries": 11,
+    "synthetic_classifications": 6,
+    "external_mail_or_billing": "none: owned sendmail sink; synthetic API client; real API token unset"
+}
